@@ -1,51 +1,84 @@
 # Meta-Sheets and Derived Sheets in VisiData
 
-| Meta-Sheet Name | Keystroke Command(s) | Long Name Command(s) | Scope | Description |
-| :---- | :---- | :---- | :---- | :---- |
-| **Meta-Sheets** |  |  |  |  |
-| Columns Sheet | `Shift+C` | `columns-sheet` | Sheet | Edit column properties of current sheet |
-|  | `gC` | `columns-all` | Session | Edit columns from all visible sheets |
-| Sheets Sheet | `Shift+S` | `sheets-stack` | Session | Jump between active sheets on current stack |
-|  | `gS` | `sheets-all` | Session | All sheets from current session (active and inactive) |
-| Options Sheet | `Shift+O` | `options-global` | Configuration | Edit global options (apply to all sheets) |
-|  | `zO` | `options-sheet` | Sheet | Edit sheet options (apply to current sheet only) |
-|  | `gO` | `options-config` | Configuration | Open options.config as TextSheet |
-| CommandLog | `Shift+D` | `cmdlog-sheet` | Sheet | Current sheet's CommandLog (includes parent sheets) |
-|  | `gD` | `cmdlog-all` | Session | Global CommandLog for all commands in session |
-|  | `zD` | `cmdlog-sheet-only` | Sheet | Current sheet's CommandLog (parent sheets removed) |
-| Error Sheet | `Ctrl+E` | `error-sheet` | Session | View last error |
-|  | `z^E` | `error-cell` | Sheet | View traceback for error in current cell |
-| Status History | `Ctrl+P` | `status-history` | Session | View history of status messages |
-| Threads Sheet | `Ctrl+T` | `threads-all` | Session | View all asynchronous threads running |
-|  | `z^T` | `threads-sheet` | Sheet | View current sheet's threads |
-| Directory Sheet | `Space` | `open-dir-current` | General | Browse files in current directory |
-| Guide Index | `Space` | `open-guide-index` | General | Read documentation within VisiData |
-| Memory Sheet | `Alt+Shift+M` | `memory-sheet` | General | Browse saved values, including clipboard |
-| Colors Sheet | (none) | `open-colors` | Configuration | View all 256 available colors and current color settings |
-| Help Sheet | `z^H` | `help-commands` | Sheet | List commands and keybindings for current sheet |
-|  | `gz^H` | `help-commands-all` | Session | List commands and keybindings for all sheet types |
-|  | `g^H` | `sysopen-help` | General | Show UNIX man page for VisiData |
-| Macro Sheet | `gm` | `macros-sheet` | Session | Open index of all user-defined macros |
-| Types Sheet | (none) | `types-sheet` | Configuration | View and manage column types |
-| Themes Sheet | (none) | `themes-sheet` | Configuration | Change interface theme |
-| **Derived Sheets** |  |  |  |  |
-| Frequency Table | `Shift+F` | `freq-col` | Sheet | Group rows by current column with aggregations |
-|  | `gF` | `freq-keys` | Sheet | Group rows by all key columns |
-|  | `zF` | `freq-summary` | Sheet | One-line summary for all rows and selected rows |
-| Describe Sheet | `Shift+I` | `describe-sheet` | Sheet | View summary statistics for current sheet's columns |
-|  | `gI` | `describe-all` | Session | View statistics for all visible columns from all sheets |
-| Pivot Table | `Shift+W` | `pivot-col` | Sheet | Group rows by key and summarize current column |
-| Melted Sheet | `Shift+M` | `melt-sheet` | Sheet | Unpivot non-key columns into variable/value columns |
-|  | `gM` | `melt-sheet-regex` | Sheet | Melt with regex pattern for column names |
-| Transposed Sheet | `Shift+T` | `transpose-sheet` | Sheet | Open new sheet with rows and columns transposed |
-| **Dive Into/Subset Sheets** |  |  |  |  |
-| Dive into Row | `Enter` | `open-row` | Sheet | Open sheet with rows grouped in current row (frequency/pivot) |
-| Dive into Cell | `zEnter` | `open-cell` | Sheet | Open sheet with rows for current cell value |
-| Dive into Selected | `gEnter` | `open-selected` | Sheet | Open sheet with rows from selected rows |
-| Duplicate Selected | `"` | `dup-selected` | Sheet | Open duplicate sheet with only selected rows |
-| Duplicate All | `g"` | `dup-rows` | Sheet | Open duplicate sheet with all rows |
-| Duplicate Selected Deep | `z"` | `dup-selected-deep` | Sheet | Open duplicate with deepcopy of selected rows |
-| Duplicate All Deep | `gz"` | `dup-rows-deep` | Sheet | Open duplicate with deepcopy of all rows |
+| Long Name | Keystroke | Scope | Description |
+| :---- | :---- | :---- | :---- |
+| **CommandLog** |  |  |  |
+| `cmdlog-sheet` | `Shift+D` | Sheet | Open current sheet's CommandLog (includes parent sheets) |
+| `cmdlog-sheet-only` | `zShift+D` | Sheet | Open CommandLog for current sheet (parent sheets removed) |
+| `cmdlog-all` | `gShift+D` | Session | Open global CommandLog for all commands in session |
+| **Columns** |  |  |  |
+| `columns-sheet` | `Shift+C` | Sheet | Edit column properties for current sheet |
+| `columns-all` | `gShift+C` | Session | Edit column properties for all visible columns from all sheets |
+| `columns-selected` | `gShift+C` *(IndexSheet only)* | Session | Open Columns Sheet with all visible columns from selected sheets |
+| **Data Cleaning** |  |  |  |
+| `dedupe-rows` | *(none)* | Sheet | Open new sheet with only non-duplicate rows |
+| `freeze-sheet` | `g'` | Sheet | Open frozen copy with all visible columns evaluated |
+| `random-rows` | *(none)* | Sheet | Open duplicate sheet with a random subset of N rows |
+| **Describe** |  |  |  |
+| `describe-sheet` | `Shift+I` | Sheet | View summary statistics for all visible columns |
+| `describe-all` | `gShift+I` | Session | View statistics for all visible columns from all sheets |
+| `describe-selected` | `gShift+I` *(IndexSheet only)* | Session | View statistics for all visible columns from selected sheets |
+| **Duplicate** |  |  |  |
+| `dup-selected` | `"` | Sheet | Open duplicate sheet with only selected rows |
+| `dup-rows` | `g"` | Sheet | Open duplicate sheet with all rows |
+| `dup-selected-deep` | `z"` | Sheet | Open duplicate with deepcopy of selected rows |
+| `dup-rows-deep` | `gz"` | Sheet | Open duplicate with deepcopy of all rows |
+| **Errors** |  |  |  |
+| `error-recent` | `Ctrl+E` | Session | View traceback for most recent error |
+| `errors-all` | `gCtrl+E` | Session | View traceback for all recent errors |
+| `error-cell` | `zCtrl+E` | Sheet | View traceback for error in current cell |
+| **Frequency** |  |  |  |
+| `freq-col` | `Shift+F` | Sheet | Open Frequency Table grouped on current column |
+| `freq-keys` | `gShift+F` | Sheet | Open Frequency Table grouped by all key columns |
+| `freq-summary` | `zF` | Sheet | Open one-line summary for all rows and selected rows |
+| **Help** |  |  |  |
+| `help-commands` | `zCtrl+H` | Sheet | List commands and keybindings for current sheet |
+| `help-commands-all` | `gzCtrl+H` | Session | List commands and keybindings for all sheet types |
+| `sysopen-help` | `gCtrl+H` | General | Show UNIX man page for VisiData |
+| `open-guide-index` | *(none)* | General | Open VisiData guides table of contents |
+| **Macros** |  |  |  |
+| `macro-sheet` | `gm` | Session | Open index of existing macros |
+| **Melt** |  |  |  |
+| `melt` | `Shift+M` | Sheet | Open Melted Sheet (unpivot), key columns retained |
+| `melt-regex` | `gShift+M` | Sheet | Open Melted Sheet with regex capture groups for column names |
+| **Navigation** |  |  |  |
+| `open-row` | `Enter` | Sheet | Open current row with sheet-specific dive |
+| `open-row-basic` | *(none)* | Sheet | Dive into current row as basic table (ignoring custom dive) |
+| `open-cell` | `zEnter` | Sheet | Open sheet with copies of rows referenced in current cell |
+| `open-source` | `` ` `` | Sheet | Open source sheet |
+| `open-source-next` | `g>` | Session | Open next sheet on parent index sheet |
+| `open-source-prev` | `g<` | Session | Open prev sheet on parent index sheet |
+| `undo-last-quit` | `gShift+U` | Session | Reopen most recently closed sheet |
+| **Options** |  |  |  |
+| `options-global` | `Shift+O` | Configuration | Edit global options (apply to all sheets) |
+| `options-sheet` | `zShift+O` | Sheet | Edit sheet options (apply to current sheet only) |
+| `open-config` | `gShift+O` | Configuration | Open options.config as text sheet |
+| **Pivot** |  |  |  |
+| `pivot` | `Shift+W` | Sheet | Open Pivot Table: group rows by key column and summarize current column |
+| **Python/Introspection** |  |  |  |
+| `pyobj-sheet` | `gCtrl+Y` | Sheet | Open current sheet as Python object |
+| `open-sidebar` | `gb` | Sheet | Open sidebar content in new sheet |
+| **Scrape** |  |  |  |
+| `scrape-cells` | `gzo` | Sheet | Open HTML Documents sheet from selected URLs |
+| **Sheets** |  |  |  |
+| `sheets-stack` | `Shift+S` | Session | Open Sheets Stack: jump between active sheets |
+| `sheets-all` | `gShift+S` | Session | Open Sheets Sheet: all sheets from current session |
+| `open-new` | `Shift+A` | General | Open new empty sheet |
+| **Status/Threads** |  |  |  |
+| `open-statuses` | `Ctrl+P` | Session | Open Status History |
+| `threads-all` | `Ctrl+T` | Session | Open Threads for all sheets |
+| `threads-sheet` | `zCtrl+T` | Sheet | Open Threads for this sheet |
+| **Transform** |  |  |  |
+| `transpose` | `Shift+T` | Sheet | Open new sheet with rows and columns transposed |
+| **Utilities** |  |  |  |
+| `open-colors` | *(none)* | Configuration | Open Color Sheet with available terminal colors |
+| `open-palettes` | *(none)* | Configuration | Open color palettes sheet for graphs |
+| `open-dir-current` | *(none)* | General | Open Directory Sheet: browse files in current directory |
+| `open-input-history` | `open-inputs` | Session | Open sheet with previous inputs |
+| `open-memos` | `Alt+Shift+M` | General | Open the Memory Sheet |
+| `open-ping` | *(none)* | General | Open sheet to ping an IP address |
+| `open-plugins` | *(none)* | Configuration | Open Plugins Sheet to manage supported plugins |
+| `open-python-packages` | *(none)* | Configuration | Open Python Packages Sheet listing installed packages |
 
 ## Notes
 
