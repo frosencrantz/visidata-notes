@@ -34,11 +34,8 @@
 <rect x="112.8" y="165" width="168.0" height="17" fill="#282828"/>
 <rect x="112.8" y="182" width="168.0" height="17" fill="#282828"/>
 <rect x="112.8" y="199" width="168.0" height="17" fill="#282828"/>
-<rect x="742.8" y="199" width="84.0" height="17" fill="#e5c07b"/>
 <rect x="112.8" y="216" width="168.0" height="17" fill="#282828"/>
-<rect x="482.4" y="216" width="352.8" height="17" fill="#87d787"/>
 <rect x="112.8" y="233" width="168.0" height="17" fill="#282828"/>
-<rect x="482.4" y="233" width="352.8" height="17" fill="#87d787"/>
 <rect x="112.8" y="250" width="168.0" height="17" fill="#282828"/>
 <rect x="12.0" y="267" width="67.2" height="17" fill="#5f87d7"/>
 <rect x="79.2" y="267" width="25.2" height="17" fill="#5f87d7"/>
@@ -117,26 +114,16 @@
 <text x="12.0" y="212" textLength="8.4" fill="#ffd700">•</text>
 <text x="20.4" y="212" textLength="92.4" fill="#ffaf5f">1902      │</text>
 <text x="112.8" y="212" textLength="168.0" fill="#ffaf5f" font-weight="bold"> Peace              </text>
-<text x="280.8" y="212" textLength="193.2" fill="#ffaf5f">│ Fred               │ </text>
-<text x="474.0" y="212" textLength="268.8" fill="#87d787">▗▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄</text>
-<text x="742.8" y="212" textLength="84.0" fill="#1e1e1e"> statuses </text>
-<text x="826.8" y="212" textLength="16.8" fill="#87d787">▄▖</text>
+<text x="280.8" y="212" textLength="562.8" fill="#ffaf5f">│ Fred               │ Fred               │ {3} en=The Nobel P…│ 1…</text>
 <text x="12.0" y="229" textLength="100.8"> 1902      │</text>
 <text x="112.8" y="229" textLength="168.0" font-weight="bold"> Physics            </text>
-<text x="280.8" y="229" textLength="193.2">│ Fysikk             │ </text>
-<text x="474.0" y="229" textLength="8.4" fill="#87d787">▐</text>
-<text x="482.4" y="229" textLength="352.8" fill="#1e1e1e"> search wrapped                           </text>
-<text x="835.2" y="229" textLength="8.4" fill="#87d787">▌</text>
+<text x="280.8" y="229" textLength="571.2">│ Fysikk             │ Fysik              │ {3} en=The Nobel P…│ 1… </text>
 <text x="12.0" y="246" textLength="100.8"> 1902      │</text>
 <text x="112.8" y="246" textLength="168.0" font-weight="bold"> Physics            </text>
-<text x="280.8" y="246" textLength="193.2">│ Fysikk             │ </text>
-<text x="474.0" y="246" textLength="8.4" fill="#87d787">▐</text>
-<text x="482.4" y="246" textLength="352.8" fill="#1e1e1e"> selected 162 rows                        </text>
-<text x="835.2" y="246" textLength="8.4" fill="#87d787">▌</text>
+<text x="280.8" y="246" textLength="571.2">│ Fysikk             │ Fysik              │ {3} en=The Nobel P…│ 1… </text>
 <text x="12.0" y="263" textLength="100.8"> 1902      │</text>
 <text x="112.8" y="263" textLength="168.0" font-weight="bold"> Physiology or Medi…</text>
-<text x="280.8" y="263" textLength="193.2">│ Fysiologi eller me…│ </text>
-<text x="474.0" y="263" textLength="369.6" fill="#87d787">▐██████████████████████████████████████████▌</text>
+<text x="280.8" y="263" textLength="571.2">│ Fysiologi eller me…│ Fysiologi eller me…│ {3} en=The Nobel P…│ 1… </text>
 <text x="12.0" y="280" textLength="67.2" fill="#1e1e1e" font-weight="bold">1›prizes</text>
 <text x="79.2" y="280" textLength="25.2" fill="#1e1e1e"> | </text>
 <text x="104.4" y="280" textLength="168.0" fill="#1e1e1e" font-weight="bold">2›prizes[…obelPrizes</text>

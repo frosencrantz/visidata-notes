@@ -1,0 +1,5 @@
+#!/usr/bin/env -S vd -p
+{"longname": "open-file", "input": "$infile"}
+{"col": "nobelPrizes", "row": "0", "longname": "open-cell"}
+{"col": "laureates", "longname": "unfurl-col"}
+{"col": "laureates_value", "longname": "expand-col-depth", "input": "2"}

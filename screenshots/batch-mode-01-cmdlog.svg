@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="143" viewBox="0 0 864.0 143" role="img">
+<rect width="100%" height="100%" rx="6" fill="#1e1e1e"/>
+<rect x="12.0" y="12" width="16.8" height="17" fill="#5f87d7"/>
+<rect x="28.8" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="37.2" y="12" width="42.0" height="17" fill="#5f87d7"/>
+<rect x="79.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="87.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
+<rect x="129.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="138.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
+<rect x="180.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="188.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
+<rect x="247.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="255.6" y="12" width="33.6" height="17" fill="#5f87d7"/>
+<rect x="289.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="297.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
+<rect x="339.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="348.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
+<rect x="390.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="398.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
+<rect x="457.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="465.6" y="12" width="386.4" height="17" fill="#5f87d7"/>
+<rect x="12.0" y="29" width="168.0" height="17" fill="#d0d0d0"/>
+<rect x="12.0" y="46" width="168.0" height="17" fill="#d0d0d0"/>
+<rect x="180.0" y="46" width="193.2" height="17" fill="#d0d0d0"/>
+<rect x="373.2" y="46" width="8.4" height="17" fill="#ffff00"/>
+<rect x="381.6" y="46" width="462.0" height="17" fill="#d0d0d0"/>
+<rect x="12.0" y="63" width="168.0" height="17" fill="#282828"/>
+<rect x="12.0" y="80" width="168.0" height="17" fill="#282828"/>
+<rect x="12.0" y="114" width="67.2" height="17" fill="#5f87d7"/>
+<rect x="79.2" y="114" width="25.2" height="17" fill="#5f87d7"/>
+<rect x="104.4" y="114" width="168.0" height="17" fill="#5f87d7"/>
+<rect x="272.4" y="114" width="25.2" height="17" fill="#5f87d7"/>
+<rect x="297.6" y="114" width="75.6" height="17" fill="#5f87d7"/>
+<rect x="373.2" y="114" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="381.6" y="114" width="58.8" height="17" fill="#3a3a3a"/>
+<rect x="440.4" y="114" width="25.2" height="17" fill="#5f87d7"/>
+<rect x="465.6" y="114" width="100.8" height="17" fill="#5f87d7"/>
+<rect x="566.4" y="114" width="235.2" height="17" fill="#5f87d7"/>
+<rect x="801.6" y="114" width="42.0" height="17" fill="#87d787"/>
+<rect x="843.6" y="114" width="8.4" height="17" fill="#5f87d7"/>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#d0d0d0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">
+<text x="28.8" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">F</text>
+<text x="37.2" y="25" textLength="42.0" fill="#1e1e1e">ile  </text>
+<text x="79.2" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">E</text>
+<text x="87.6" y="25" textLength="42.0" fill="#1e1e1e">dit  </text>
+<text x="129.6" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">V</text>
+<text x="138.0" y="25" textLength="42.0" fill="#1e1e1e">iew  </text>
+<text x="180.0" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">C</text>
+<text x="188.4" y="25" textLength="58.8" fill="#1e1e1e">olumn  </text>
+<text x="247.2" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">R</text>
+<text x="255.6" y="25" textLength="33.6" fill="#1e1e1e">ow  </text>
+<text x="289.2" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">D</text>
+<text x="297.6" y="25" textLength="42.0" fill="#1e1e1e">ata  </text>
+<text x="339.6" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">P</text>
+<text x="348.0" y="25" textLength="42.0" fill="#1e1e1e">lot  </text>
+<text x="390.0" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">S</text>
+<text x="398.4" y="25" textLength="58.8" fill="#1e1e1e">ystem  </text>
+<text x="457.2" y="25" textLength="8.4" fill="#1e1e1e" text-decoration="underline">H</text>
+<text x="465.6" y="25" textLength="386.4" fill="#1e1e1e">elp     | VisiData 3.4 | Support VisiData: htt</text>
+<text x="12.0" y="42" textLength="168.0" fill="#1e1e1e" font-weight="bold" text-decoration="underline"> sheet              </text>
+<text x="180.0" y="42" textLength="8.4">│</text>
+<text x="188.4" y="42" textLength="142.8" text-decoration="underline"> col             </text>
+<text x="331.2" y="42" textLength="8.4">│</text>
+<text x="339.6" y="42" textLength="42.0" text-decoration="underline"> row </text>
+<text x="381.6" y="42" textLength="8.4">│</text>
+<text x="390.0" y="42" textLength="151.2" text-decoration="underline"> longname         </text>
+<text x="541.2" y="42" textLength="8.4">│</text>
+<text x="549.6" y="42" textLength="58.8" text-decoration="underline"> input </text>
+<text x="608.4" y="42" textLength="8.4">│</text>
+<text x="616.8" y="42" textLength="100.8" text-decoration="underline"> keystrokes </text>
+<text x="717.6" y="42" textLength="8.4">│</text>
+<text x="726.0" y="42" textLength="117.6" text-decoration="underline"> comment      </text>
+<text x="12.0" y="59" textLength="168.0" fill="#282828" font-weight="bold"> prizes             </text>
+<text x="180.0" y="59" textLength="193.2" fill="#1e1e1e">│ nobelPrizes     │ 0  </text>
+<text x="373.2" y="59" textLength="8.4" fill="#1e1e1e">#</text>
+<text x="381.6" y="59" textLength="462.0" fill="#1e1e1e">│ open-cell        │       │ zEnter     │ open sheet w…</text>
+<text x="12.0" y="76" textLength="168.0" font-weight="bold"> prizes[0].nobelPri…</text>
+<text x="180.0" y="76" textLength="672.0">│ laureates       │     │ unfurl-col       │       │ zShift+M   │ row-wise exp… </text>
+<text x="12.0" y="93" textLength="168.0" font-weight="bold"> prizes[0].nobelPri…</text>
+<text x="180.0" y="93" textLength="672.0">│ laureates_value │     │ expand-col-depth │ 2     │ z(         │ expand curre… </text>
+<text x="12.0" y="127" textLength="67.2" fill="#1e1e1e" font-weight="bold">1›prizes</text>
+<text x="79.2" y="127" textLength="25.2" fill="#1e1e1e"> | </text>
+<text x="104.4" y="127" textLength="168.0" fill="#1e1e1e" font-weight="bold">2›prizes[…obelPrizes</text>
+<text x="272.4" y="127" textLength="25.2" fill="#1e1e1e"> | </text>
+<text x="297.6" y="127" textLength="75.6" fill="#1e1e1e" font-weight="bold">3›prizes[</text>
+<text x="381.6" y="127" textLength="58.8" font-weight="bold">Shift+D</text>
+<text x="465.6" y="127" textLength="100.8">cmdlog-sheet</text>
+<text x="566.4" y="127" textLength="235.2" fill="#1e1e1e">          3 logged commands </text>
+<text x="801.6" y="127" textLength="42.0" fill="#1e1e1e" font-weight="bold">[1/1]</text>
+</g>
+</svg>

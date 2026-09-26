@@ -4,8 +4,6 @@ AWAIT "\$\s*$"
 SEND "cd datasets" --enter
 SEND "vd prizes.json" --enter
 AWAIT "1 rows" --start-line -1
-# Any keystroke clears the startup messages; Ctrl+L (redraw) changes nothing else.
-SEND "\x0c"
 CAPTURE nested-data-00-envelope --trim
 
 # Dive into the nobelPrizes cell (cursor starts on that column).

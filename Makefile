@@ -1,11 +1,15 @@
 PYTHON ?= python3
 
-.PHONY: screenshots refresh-data
+.PHONY: screenshots check refresh-data
 
 ## Regenerate every screenshot from terminal/scripts/*.ts
 screenshots:
 	rm -f screenshots/*.svg terminal/output/*.txt
 	$(PYTHON) scripts/termscript.py terminal/scripts/*.ts
+
+## Check that chapters and capture scripts agree on screenshots
+check:
+	$(PYTHON) scripts/check_screenshots.py
 
 ## Deliberately re-download the dataset the screenshots are captured from
 refresh-data:

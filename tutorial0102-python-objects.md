@@ -14,7 +14,10 @@ The second consequence: you can hand VisiData a Python object directly. Press Ct
 {"mean": statistics.mean(\[1, 2, 3\]), "tags": \["a", "b"\]}
 
 (If Python complains that statistics isn't defined, press g Ctrl+X first — import-python — and type statistics to import it into VisiData's scope.)  
-You get a two-row key/value sheet, and the tags cell reads \[2\] — the same notation, the same dive-and-expand machinery, on an object that existed only in memory.  
+You get a two-row key/value sheet, and the tags cell reads \[2\] — the same notation, the same dive-and-expand machinery, on an object that existed only in memory.
+
+![Ctrl+X on a Python dictionary opens a two-row key/value sheet; the tags cell reads [2]](screenshots/python-objects-01-pyobj-expr.svg)
+
 A more practical party trick: g Ctrl+X to import os, then Ctrl+X with dict(os.environ) — your environment variables as a browsable, sortable, searchable sheet. Once you've done that, "what could I point VisiData at?" starts to have a much longer answer than "files."
 
 ## Inspecting from the data side: the Ctrl+Y family
@@ -31,6 +34,8 @@ The same idea works in reverse — from a sheet back into raw Python:
 | g Ctrl+Y | pyobj-sheet | Open the whole sheet as a raw Python object |
 
 Put the cursor on any unexpanded category cell in the prizes sheet and press z Ctrl+Y: the dictionary opens as a key/value sheet you can inspect directly — often the fastest way to peek inside one cell without reshaping anything.
+
+![z Ctrl+Y on a category cell opens its dictionary as a key/value sheet: en, no, se](screenshots/python-objects-02-pyobj-cell.svg)
 
 ## The door swings both ways: visidata.view()
 

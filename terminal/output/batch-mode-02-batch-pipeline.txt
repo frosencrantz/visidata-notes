@@ -1,0 +1,14 @@
+$ vd -b -p flatten-prizes.vdj infile=prizes.json -o - | grep 1972 | cut -f 1,10
+1972    Christian Anfinsen
+1972    Stanford Moore
+1972    William H. Stein
+1972    John R. Hicks
+1972    Kenneth J. Arrow
+1972    Heinrich Böll
+1972
+1972    John Bardeen
+1972    Leon N. Cooper
+1972    Robert Schrieffer
+1972    Gerald M. Edelman
+1972    Rodney R. Porter
+$

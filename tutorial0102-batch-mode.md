@@ -16,6 +16,8 @@ You get a sheet where each row is a command you ran, with columns that should lo
 | input | What you typed at the prompt — a filename, a depth, an expression |
 | keystrokes | The keys you pressed to invoke it |
 
+![The Shift+D command log after the nested-data flow: open-cell, unfurl-col, and expand-col-depth with input 2](screenshots/batch-mode-01-cmdlog.svg)
+
 Two things worth noticing. First, the longname column: those names you've been running with Space since the selection chapter aren't an obscure alternative interface — they're the *primary* names of every command, and the keystrokes are just bindings to them. The log is written in longnames because longnames are what VisiData actually speaks.  
 Second, what's *missing*: your navigation. Cursor movement, scrolling, paging through sheets to look around — none of it is logged, because none of it changed anything. The log records intent, not fidgeting.  
 There are three views of the log, and the differences matter:
@@ -88,6 +90,8 @@ That's a real shebang. chmod \+x flatten-prizes.vdj and it runs as a command in 
 And because both ends of the pipeline speak stdin/stdout, a cmdlog slots into shell pipelines like any other tool — VisiData reads data from stdin with \- as the filename (plus \-f to name the format), and \-p \- even reads the *log itself* from stdin:  
 curl \-s "https://api.nobelprize.org/2.1/nobelPrizes?limit=1000" \> prizes.json  
 vd \-b \-p flatten-prizes.vdj infile=prizes.json \-o \- | grep 1972
+
+![Running the pipeline in batch mode and filtering for 1972, trimmed to the year and laureate name columns with cut -f 1,10](screenshots/batch-mode-02-batch-pipeline.svg)
 
 ## From log to keystroke: macros
 

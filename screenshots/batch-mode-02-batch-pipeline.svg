@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="864" height="296" viewBox="0 0 864.0 296" role="img">
+<rect width="100%" height="100%" rx="6" fill="#1e1e1e"/>
+<g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#d0d0d0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">
+<text x="12.0" y="25" textLength="8.4" fill="#00afaf">$</text>
+<text x="20.4" y="25" textLength="831.6"> vd -b -p flatten-prizes.vdj infile=prizes.json -o - | grep 1972 | cut -f 1,10                     </text>
+<text x="12.0" y="42" textLength="840.0">1972    Christian Anfinsen                                                                          </text>
+<text x="12.0" y="59" textLength="840.0">1972    Stanford Moore                                                                              </text>
+<text x="12.0" y="76" textLength="840.0">1972    William H. Stein                                                                            </text>
+<text x="12.0" y="93" textLength="840.0">1972    John R. Hicks                                                                               </text>
+<text x="12.0" y="110" textLength="840.0">1972    Kenneth J. Arrow                                                                            </text>
+<text x="12.0" y="127" textLength="840.0">1972    Heinrich Böll                                                                               </text>
+<text x="12.0" y="144" textLength="840.0">1972                                                                                                </text>
+<text x="12.0" y="161" textLength="840.0">1972    John Bardeen                                                                                </text>
+<text x="12.0" y="178" textLength="840.0">1972    Leon N. Cooper                                                                              </text>
+<text x="12.0" y="195" textLength="840.0">1972    Robert Schrieffer                                                                           </text>
+<text x="12.0" y="212" textLength="840.0">1972    Gerald M. Edelman                                                                           </text>
+<text x="12.0" y="229" textLength="840.0">1972    Rodney R. Porter                                                                            </text>
+<text x="12.0" y="246" textLength="8.4" fill="#00afaf">$</text>
+</g>
+</svg>
