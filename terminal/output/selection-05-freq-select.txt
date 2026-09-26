@@ -1,0 +1,10 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+ category.en        ║↓count  ♯│ percent%│ histogram                             ~║
+ Physiology or Medi…║     241 │   22.42 │ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ║
+•Physics            ║     236 │   21.95 │ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  ║
+•Chemistry          ║     208 │   19.35 │ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■       ║
+ Peace              ║     162 │   15.07 │ ■■■■■■■■■■■■■■■■■■■■■■■■■              ║
+ Literature         ║     129 │   12.00 │ ■■■■■■■■■■■■■■■■■■■■                   ║
+ Economic Sciences  ║      99 │    9.21 │ ■■■■■■■■■■■■■■■                        ║
+
+1›prizes | 2›prizes[…obelPrizes | 3›prizes[…s_unfurled | 6 s   select-row          6 bins  •2 [1/1]

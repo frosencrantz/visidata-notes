@@ -22,13 +22,20 @@ Note: dup-selected gives the new sheet *references* to the same rows — an edit
 Regex selection (|) works on displayed values, and nested cells display as {7} and \[3\] — not much for a regex to grab. What you want is z| (select-expr), which selects by Python expression, with column names available as variables. On the unfurled sheet, try:  
 not laureates\_value
 
-The status bar reports 49 rows selected — the unawarded prizes, found in one stroke. Press " to isolate them, or z\\ (unselect-expr) to release them.  
+The status bar reports 49 rows selected — the unawarded prizes, found in one stroke. Press " to isolate them, or z\\ (unselect-expr) to release them.
+
+![The unfurled sheet with the 49 unawarded prizes selected, marked with • in the war years 1914–1916](screenshots/selection-01-select-expr.svg)
+
+![The 49 unawarded prizes opened as their own sheet with " (dup-selected)](screenshots/selection-02-dup-selected.svg)
+
 Because select and unselect are separate commands, you can *sculpt* a selection incrementally: select a broad set with one expression, then carve pieces away with z\\, add more with a second z|, and only then act. Nothing commits until you use a verb.  
 One member of the basic trio deserves a promotion here: gt, the global toggle, which flips the selection state of every row at once. Its superpower is indirection — sometimes the set you want is awkward to describe, but its *complement* is easy. "Every real laureate row" needs a guarded expression; its complement is just not laureates\_value. Select the easy negative, press gt, and you're holding the 1,026 rows you actually wanted. Once you start looking for it, the describe-the-negative-then-flip move comes up constantly.  
 Here's the part that makes expressions and expansion work *together*. Remember from the nested-data chapter that expanding a column hides the parent rather than deleting it — that's why ) can bring it back. A pleasant consequence: hidden parents remain in scope for expressions. On the fully expanded sheet, this selects every organizational laureate:  
 laureates\_value and laureates\_value.get("orgName")
 
 31 rows — the Red Cross, the UNHCR, and friends — selected by reaching into the intact parent dictionary, even though the visible sheet shows only the flattened columns. (The laureates\_value and … guard skips the 49 empty rows instead of erroring on them.)
+
+![The 31 organizational laureates opened as a sheet, showing laureates_value.orgName.en: the Red Cross, UNHCR, UNICEF, and others](screenshots/selection-03-select-orgs.svg)
 
 ## Selecting by example
 
@@ -41,7 +48,10 @@ Sometimes the row you want more of is right under the cursor, and writing an exp
 | z, | select-exact-cell | Like ,, but matches the typed value instead of the displayed one |
 | gz, | select-exact-row | Row-wise version of z, |
 
-Cursor on any Peace cell in category.en, press ,, and every Peace prize is selected. No expression, no regex, no typing.  
+Cursor on any Peace cell in category.en, press ,, and every Peace prize is selected. No expression, no regex, no typing.
+
+![Pressing , on a Peace cell selects all 162 Peace rows](screenshots/selection-04-select-equal-cell.svg)
+
 The displayed-vs-typed distinction starts to matter once you've typed your columns. Two cells can display identically but hold different underlying values (a float 1 and an int 1, a date and its string) — or display differently while being equal underneath, thanks to a format string. , matches what you *see*; z, matches what the cell *is*. When a selection comes back with a count that surprises you, this distinction is the first thing to check.
 
 ## Commands without keys: meet the longname
@@ -52,12 +62,18 @@ Not every command earns a keybinding, and the selection family has some of the b
 * select-equal-selected — select every row whose value in the current column appears among the *already-selected* rows. This is a semi-join, and it composes beautifully: select the unawarded rows with z|, put the cursor on awardYear, run select-equal-selected, and now you've grown the selection to *every* prize from a year in which some prize went unawarded — awarded and unawarded alike, ready for comparison.  
 * select-random — select a random sample of N rows. The honest way to spot-check a cleaning step on a big sheet: sample, ", eyeball.
 
+![select-error selects the 74 rows whose first-winner expression errors, including the unawarded war-year prizes](screenshots/selection-07-select-error.svg)
+
 ## Selection travels between sheets
 
 The most advanced selection trick doesn't add a keystroke — it changes where you press the ones you know. Summary sheets aren't just for reading; they're control panels for selecting on the sheet below.
 
 * On a frequency table (Shift+F), s on a bin selects that bin's underlying source rows. Want all the Physics and Chemistry laureate-rows selected? Frequency on category.en, s on two rows, q back — done.  
 * The Describe sheet (Shift+I) goes further: put the cursor on any summary cell — say, the errors count for a column, or its nulls — and z s selects exactly those rows back on the source sheet.
+
+![The frequency table on category.en with the Physics and Chemistry bins selected](screenshots/selection-05-freq-select.svg)
+
+![Back on the source sheet, the 444 Physics and Chemistry rows are selected](screenshots/selection-06-freq-selected-source.svg)
 
 This inverts the usual flow. Instead of "scroll the data looking for problems," it's "read the summary, select the problem from above, dive down to the culprits already highlighted." On a million-row sheet, that inversion is the difference between minutes and seconds.
 

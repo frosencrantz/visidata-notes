@@ -1,0 +1,16 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+<laureates_value.orgName.en                                  │ laureates_value.or…│ laureates_valu>
+ Institute of International Law                              │ Folkerettsinstitut…│               ⌀
+ Permanent International Peace Bureau                        │ Det internasjonale…│               ⌀
+ International Committee of the Red Cross                    │ Den internasjonale…│               ⌀
+ Nansen International Office for Refugees                    │ Det internasjonale…│               ⌀
+ International Committee of the Red Cross                    │ Den internasjonale…│               ⌀
+ Friends Service Council                                     │ Vennenes samfunns …│               ⌀
+ American Friends Service Committee                          │ De amerikanske ven…│ AFSC
+ Office of the United Nations High Commissioner for Refugees │ FNs høykommissaria…│ UNHCR
+ International Committee of the Red Cross                    │ Den internasjonale…│               ⌀
+ League of Red Cross Societies                               │ Røde Kors-Ligaen   │               ⌀
+ United Nations Children's Fund                              │ FNs barnefond      │ UNICEF
+ International Labour Organization                           │ Den internasjonale…│ ILO
+ Amnesty International                                       │                   ⌀│               ⌀
+1›prizes | 2›prizes[…obelPrizes | 3›prizes[…s_unfurled _   resize-col-max         31 rows  [M][1/1]
