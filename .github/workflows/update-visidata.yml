@@ -1,0 +1,76 @@
+# Once a week, check PyPI for a newer VisiData. If there is one, bump the
+# pin in requirements.txt, regenerate every screenshot with it, and open a
+# pull request so the changes can be reviewed before merging.
+name: Update VisiData
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"  # Mondays, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compare pinned and latest VisiData
+        id: version
+        run: |
+          pinned=$(sed -n 's/^visidata==//p' requirements.txt)
+          latest=$(curl -sSf https://pypi.org/pypi/visidata/json | python3 -c 'import json,sys; print(json.load(sys.stdin)["info"]["version"])')
+          echo "pinned=$pinned" >> "$GITHUB_OUTPUT"
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          echo "VisiData pinned $pinned, latest $latest"
+
+      - name: Bump the pin and regenerate screenshots
+        id: capture
+        if: steps.version.outputs.pinned != steps.version.outputs.latest
+        run: |
+          sed -i "s/^visidata==.*/visidata==${{ steps.version.outputs.latest }}/" requirements.txt
+          pip install -r requirements.txt
+          # A new release may change what a script waits for. Keep going so
+          # the PR still opens, and report the failure in its description.
+          if make screenshots > capture.log 2>&1 && make check >> capture.log 2>&1; then
+            echo "result=passed" >> "$GITHUB_OUTPUT"
+          else
+            echo "result=failed" >> "$GITHUB_OUTPUT"
+            # Keep the old screenshots rather than a half-regenerated set.
+            git checkout -- screenshots terminal/output
+            git clean -fdq screenshots terminal/output
+          fi
+          cat capture.log
+          {
+            echo "log<<CAPTURE_LOG_END"
+            tail -n 40 capture.log
+            echo "CAPTURE_LOG_END"
+          } >> "$GITHUB_OUTPUT"
+          rm capture.log
+
+      - name: Open pull request
+        if: steps.version.outputs.pinned != steps.version.outputs.latest
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: update-visidata-${{ steps.version.outputs.latest }}
+          commit-message: Update VisiData to ${{ steps.version.outputs.latest }} and regenerate screenshots
+          title: >-
+            Update VisiData to ${{ steps.version.outputs.latest }}${{ steps.capture.outputs.result == 'failed' && ' (screenshot capture failed)' || '' }}
+          body: |
+            Bumps the pinned VisiData from ${{ steps.version.outputs.pinned }} to ${{ steps.version.outputs.latest }} and regenerates every screenshot.
+
+            **Capture: ${{ steps.capture.outputs.result }}.** Check the `terminal/output/*.txt` diffs to see what changed on screen, and whether the chapters' text still matches.
+
+            <details><summary>Capture log (last 40 lines)</summary>
+
+            ```
+            ${{ steps.capture.outputs.log }}
+            ```
+            </details>

@@ -1,0 +1,57 @@
+# Regenerate the tutorial screenshots whenever the chapters, the capture
+# scripts, the dataset or the pinned VisiData version change, and commit
+# any updated images back to the same branch.
+name: Screenshots
+
+on:
+  push:
+    paths:
+      - "*.md"
+      - "terminal/**"
+      - "datasets/**"
+      - "scripts/**"
+      - "requirements.txt"
+      - "Makefile"
+      - ".github/workflows/screenshots.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: screenshots-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  screenshots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Capture screenshots
+        run: make screenshots
+
+      - name: Check chapters and captures agree
+        run: make check
+
+      - name: Commit updated screenshots
+        run: |
+          git add screenshots terminal/output
+          if git diff --cached --quiet; then
+            echo "Screenshots are up to date."
+            exit 0
+          fi
+          git diff --cached --stat
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Regenerate screenshots"
+          # Commits made with GITHUB_TOKEN don't trigger workflows, so this
+          # can't loop.
+          git push
