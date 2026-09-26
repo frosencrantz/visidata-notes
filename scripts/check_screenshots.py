@@ -16,8 +16,6 @@ def main():
     problems = []
     embedded = {}
     for md in sorted(REPO.glob("*.md")):
-        if md.name == "README.md":  # documents the syntax with an example
-            continue
         for name in re.findall(r"\]\(screenshots/([\w.-]+)\.svg\)", md.read_text()):
             embedded.setdefault(name, md.name)
 

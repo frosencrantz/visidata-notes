@@ -19,7 +19,7 @@ You get a sheet where each row is a command you ran, with columns that should lo
 ![The Shift+D command log after the nested-data flow: open-cell, unfurl-col, and expand-col-depth with input 2](screenshots/batch-mode-01-cmdlog.svg)
 
 Two things worth noticing. First, the longname column: those names you've been running with Space since the selection chapter aren't an obscure alternative interface — they're the *primary* names of every command, and the keystrokes are just bindings to them. The log is written in longnames because longnames are what VisiData actually speaks.  
-Second, what's *missing*: your navigation. Cursor movement, scrolling, paging through sheets to look around — none of it is logged, because none of it changed anything. The log records intent, not fidgeting.  
+Second, what's *missing*: most of your navigation. Moving the cursor with the arrow keys or h/j/k/l, scrolling, paging through sheets to look around — none of it is logged, because none of it changed anything. The log records intent, not fidgeting. The exception is *jumps*: gh (go-leftmost), c (go-col-regex), zr (go-row-number) and their relatives are commands in their own right, so they do show up in the log. That's harmless — replaying a jump just puts the cursor back where the next command expects it — but they're usually the first rows to trim.  
 There are three views of the log, and the differences matter:
 
 | Keystroke | Command | What you see |
@@ -89,7 +89,9 @@ That's a real shebang. chmod \+x flatten-prizes.vdj and it runs as a command in 
 
 And because both ends of the pipeline speak stdin/stdout, a cmdlog slots into shell pipelines like any other tool — VisiData reads data from stdin with \- as the filename (plus \-f to name the format), and \-p \- even reads the *log itself* from stdin:  
 curl \-s "https://api.nobelprize.org/2.1/nobelPrizes?limit=1000" \> prizes.json  
-vd \-b \-p flatten-prizes.vdj infile=prizes.json \-o \- | grep 1972
+vd \-b \-p flatten-prizes.vdj infile=prizes.json \-o \- | grep 1972 | cut \-f 1,10
+
+(The output is tab-separated, so cut \-f 1,10 keeps just the award year and the laureate's name — the full lines have more than twenty columns.)
 
 ![Running the pipeline in batch mode and filtering for 1972, trimmed to the year and laureate name columns with cut -f 1,10](screenshots/batch-mode-02-batch-pipeline.svg)
 
@@ -110,7 +112,7 @@ Replay is by *name* — sheet names, column names, command longnames. That gives
 ## Try it
 
 1. Archaeology. After your next real VisiData session, open g Shift+D and count the dead ends. Then open Shift+D and admire the pruning. Save the pruned version.  
-2. The full pipeline. Build flatten-prizes.vdj yourself — interactively, then trim the log. Batch-run it. Confirm the output has 1,075 rows, and that you know why it isn't 1,026.  
+2. The full pipeline. Build flatten-prizes.vdj yourself — interactively, then trim the log. Batch-run it. Confirm the output has 1,075 rows, and that you know why it isn't 1,026. (If you check with wc \-l on the \-o \- output, expect 1,077 lines: one is the header, and one prize motivation — the 2014 Literature prize — contains a line break.)  
 3. Parameterize. Add a select-expr row with a $category placeholder and dup-selected after it, so the pipeline emits one category's laureates. Run it twice with different categories.  
 4. A keystroke of your own. Record a macro that unfurls the current column and expands the result to depth 2\. Spend it on the next nested dataset you meet.  
 5. Stretch. chmod \+x your pipeline and chain it: pipe its \-o \- output into grep, wc \-l, or — why not — another vd.
