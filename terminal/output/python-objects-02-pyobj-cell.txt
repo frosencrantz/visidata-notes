@@ -1,0 +1,7 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
+ key ║ value     ║
+ en  ║ Chemistry ║
+ no  ║ Kjemi     ║
+ se  ║ Kemi      ║
+
+1›prizes | 3›prizes[…obelPrizes | 4›prizes[0].nobelPriz zCtrl+Y   pyobj-cell          3 items [1/1]

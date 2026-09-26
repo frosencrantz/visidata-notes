@@ -1,0 +1,16 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
+<links              │ laureates[0]       │ laureates[1]       │ laureates[2]       │ topMotivation
+ [1] {4} rel=nobelP…│ {7} id=160 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=569 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=462 knownNa…│ {7} id=463 knownNa…│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=1 knownName…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=293 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=161 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=571 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=464 knownNa…│ {7} id=465 knownNa…│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=2 knownName…│ {7} id=3 knownName…│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=294 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=162 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=572 knownNa…│                   ⌀│                   ⌀│              ⌀
+ [1] {4} rel=nobelP…│ {7} id=466 knownNa…│                   ⌀│                   ⌀│              ⌀
+1›prizes | 2›prizes[0].nobelPrizes|                         l   go-right        682 dicts  [M][1/1]

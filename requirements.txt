@@ -1,0 +1,9 @@
+# The VisiData version every screenshot is captured with: a commit on the
+# develop branch of https://github.com/saulpw/visidata. The weekly
+# "Update VisiData" workflow bumps this to the latest develop commit.
+visidata @ git+https://github.com/saulpw/visidata@7609212ec2febafa9caba7183cbebfaf49627909
+
+# Screenshot tooling (scripts/termscript.py)
+pexpect==4.9.0
+pyte==0.8.2
+wcwidth==0.9.1

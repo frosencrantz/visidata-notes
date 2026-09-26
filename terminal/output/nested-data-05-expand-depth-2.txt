@@ -1,0 +1,16 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
+<laureates_value.id │ laureates_value.kn…│ laureates_value.kn…│ laureates_value.fu…│ laureates_val>
+ 160                │ Jacobus H. van 't …│                   ⌀│ Jacobus Henricus v…│ 1
+ 569                │ Sully Prudhomme    │                   ⌀│ Sully Prudhomme    │ 1
+ 462                │ Henry Dunant       │                   ⌀│ Jean Henry Dunant  │ 1/2
+ 463                │ Frédéric Passy     │                   ⌀│ Frédéric Passy     │ 1/2
+ 1                  │ Wilhelm Conrad Rön…│                   ⌀│ Wilhelm Conrad Rön…│ 1
+ 293                │ Emil von Behring   │                   ⌀│ Emil Adolf von Beh…│ 1
+ 161                │ Emil Fischer       │                   ⌀│ Hermann Emil Fisch…│ 1
+ 571                │ Theodor Mommsen    │                   ⌀│ Christian Matthias…│ 1
+ 464                │ Élie Ducommun      │                   ⌀│ Élie Ducommun      │ 1/2
+ 465                │ Albert Gobat       │                   ⌀│ Charles Albert Gob…│ 1/2
+ 2                  │ Hendrik A. Lorentz │                   ⌀│ Hendrik Antoon Lor…│ 1/2
+ 3                  │ Pieter Zeeman      │                   ⌀│ Pieter Zeeman      │ 1/2
+ 294                │ Ronald Ross        │                   ⌀│ Ronald Ross        │ 1
+1›prizes | 2›prizes[…obelPrizes | 3›prizes[0].nobelPrize c   go-col-regex       1075 rows  [M][1/1]
