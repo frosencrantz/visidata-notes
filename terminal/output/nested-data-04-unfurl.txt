@@ -1,0 +1,16 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+<prizeAmount#│ prizeAmountAdjuste#│ links              │ laureates_key │ laureates_value    │ topM…
+      150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=160 knownNa…│     ⌀
+      150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=569 knownNa…│     ⌀
+      150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=462 knownNa…│     ⌀
+      150782 │           10833458 │ [1] {4} rel=nobelP…│ 1            #│ {7} id=463 knownNa…│     ⌀
+      150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=1 knownName…│     ⌀
+      150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=293 knownNa…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=161 knownNa…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=571 knownNa…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=464 knownNa…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 1            #│ {7} id=465 knownNa…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=2 knownName…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 1            #│ {7} id=3 knownName…│     ⌀
+      141847 │           10191492 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=294 knownNa…│     ⌀
+1›prizes | 2›prizes[…obelPrizes | 3›prizes[0].nobelPrizes_laurea l   go-right       1075 rows [1/1]

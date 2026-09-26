@@ -141,6 +141,10 @@ PALETTE = {
     "brightcyan": "#7fd6e0", "brightwhite": "#ffffff",
 }
 DEFAULT_FG, DEFAULT_BG = "#d0d0d0", "#1e1e1e"
+# Because "black" is drawn as dark gray, xterm-256 color 232 (VisiData's
+# current-column background, a hair lighter than black) must be lifted to
+# stay a hair lighter than the background.
+HEX_OVERRIDES = {"080808": "#282828"}
 CELL_W, CELL_H, FONT_SIZE, PAD = 8.4, 17, 14, 12
 FONT = "ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 
@@ -151,7 +155,7 @@ def color(value, default):
     if value in PALETTE:
         return PALETTE[value]
     if re.fullmatch(r"[0-9a-fA-F]{6}", value):
-        return "#" + value.lower()
+        return HEX_OVERRIDES.get(value.lower(), "#" + value.lower())
     return default
 
 

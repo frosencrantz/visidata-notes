@@ -39,7 +39,10 @@ Note: This chapter uses a .json file, but everything in it applies equally to .j
 ## Diving into a cell
 
 We want the 682 records inside that \[682\] cell. Move the cursor to the nobelPrizes column and press z Enter (the command is called open-cell).  
-VisiData opens the contents of that one cell as a brand-new sheet: 682 rows, one per prize, with columns awardYear, category, categoryFullName, dateAwarded, prizeAmount, prizeAmountAdjusted, links, laureates, and topMotivation.  
+VisiData opens the contents of that one cell as a brand-new sheet: 682 rows, one per prize, with columns awardYear, category, categoryFullName, dateAwarded, prizeAmount, prizeAmountAdjusted, links, laureates, and topMotivation.
+
+![The 682-row prizes sheet after opening the nobelPrizes cell with z Enter](screenshots/nested-data-01-open-cell.svg)
+
 This is the general pattern for API responses: open the file, look at the envelope, and dive into the cell that holds the actual records. As always, q closes the current sheet and takes you back up a level — you can dive in and out freely without changing anything.  
 Note: Enter by itself (open-row) dives into the entire current *row* rather than one cell. On a one-row envelope sheet like this one, either works — but open-cell says exactly what you mean, so it's the habit worth building.  
 Before moving on, take stock of the new sheet with the notation you just learned. awardYear, dateAwarded, and the two prize-amount columns are plain values — you could set their types right now (\# for the amounts, @ for the date) just as you did in the earlier chapters. But category shows {3}, links shows \[1\], and laureates shows \[1\], \[2\], or \[3\] depending on the row. Those need flattening before they'll sort, filter, or aggregate.
@@ -52,6 +55,8 @@ category.en    category.no    category.se
 Chemistry      Kjemi          Kemi  
 Literature     Litteratur     Litteratur  
 …
+
+![The category column expanded into category.en, category.no, and category.se](screenshots/nested-data-02-expand-category.svg)
 
 Each key became a column, named with a dot: parent.key. These are ordinary columns now — you can sort by category.en, build a frequency table on it with Shift+F, whatever you like.  
 Now press ) (contract-col) with the cursor on any of the three: the dotted columns collapse back into the original category column. Expansion is completely reversible, and nothing you do here touches the file on disk. This is worth internalizing early — you can expand, look around, and contract with no consequences, so explore freely.  
@@ -72,7 +77,10 @@ Try g( on this sheet, just to see it. It works — but notice how much noise app
 
 So far so good: dictionaries expand into columns naturally, because every row has the same keys. Now let's try the same move on a list column and watch it go wrong.  
 Put the cursor on laureates and press (.  
-You get three new columns: laureates\[0\], laureates\[1\], and laureates\[2\] — the first, second, and third entries of each row's list, by *position*. Scroll around. Since 362 prizes went to a single winner, laureates\[1\] and laureates\[2\] are mostly empty. And every cell that isn't empty is still an unexpanded {7} dictionary.  
+You get three new columns: laureates\[0\], laureates\[1\], and laureates\[2\] — the first, second, and third entries of each row's list, by *position*. Scroll around. Since 362 prizes went to a single winner, laureates\[1\] and laureates\[2\] are mostly empty. And every cell that isn't empty is still an unexpanded {7} dictionary.
+
+![Expanding the laureates list gives positional columns laureates[0], laureates[1], and laureates[2], mostly empty](screenshots/nested-data-03-expand-list.svg)
+
 Think about what you'd have to do to answer a question as simple as *"list every laureate's name"*: expand all three positional columns, then somehow combine laureates\[0\].knownName, laureates\[1\].knownName, and laureates\[2\].knownName into one. The shape is fighting you.  
 The problem isn't VisiData — it's that we asked for the wrong reshaping. A dictionary's keys want to become columns. A list's items want to become rows. A prize with three winners shouldn't be one row with three column-families; it should be three rows.  
 Press ) to contract the list back, and let's do it properly.
@@ -80,7 +88,10 @@ Press ) to contract the list back, and let's do it properly.
 ## Unfurling: one row per list item
 
 With the cursor on laureates, press z Shift+M (unfurl-col).  
-VisiData opens a new sheet — note the \_unfurled suffix in the sheet name — with 1,075 rows. Each prize row has been repeated once per laureate: the 1901 Chemistry prize (one winner) is still one row, while the 2025 Physics prize (three winners) is now three rows, each carrying identical values for awardYear, category, prizeAmount, and the other prize-level columns.  
+VisiData opens a new sheet — note the \_unfurled suffix in the sheet name — with 1,075 rows. Each prize row has been repeated once per laureate: the 1901 Chemistry prize (one winner) is still one row, while the 2025 Physics prize (three winners) is now three rows, each carrying identical values for awardYear, category, prizeAmount, and the other prize-level columns.
+
+![The unfurled sheet: 1075 rows, with laureates_key and laureates_value columns](screenshots/nested-data-04-unfurl.svg)
+
 The laureates column is gone, replaced by two new ones:
 
 * laureates\_value — the individual list item (here, one laureate's {7} dictionary)  
@@ -105,6 +116,8 @@ laureates\_value.orgName.en
 laureates\_value.acronym  
 …
 
+![Each laureate dictionary expanded two levels deep into laureates_value.id, knownName, fullName, and portion columns](screenshots/nested-data-05-expand-depth-2.svg)
+
 (Depth 2, because fields like knownName are themselves dictionaries of translations — one level would leave {1} cells behind. If you'd rather not guess the depth, z( with 0 expands fully; it just brings some extra translation columns along.)  
 Notice something curious: there's both a knownName.en column and an orgName.en column, and no row fills in both. That's because Peace Prizes can go to *organizations* — the Red Cross, the UN — whose records have orgName and acronym where a person's record has knownName. When VisiData expands a column, it takes the union of every row's keys, so both varieties get columns, and each row simply leaves blank the ones it doesn't have. An empty cell after an expansion doesn't mean missing data — it can just mean "this row's dictionary doesn't have that key." Real-world JSON does this constantly, and now you'll recognize it on sight.  
 From here, everything you know from the earlier chapters applies, because this is now just a table. Two quick payoffs:
@@ -119,7 +132,10 @@ Back on the 682-row prizes sheet, press \= and enter:
 laureates\[0\]\["knownName"\]\["en"\]
 
 You get a new column holding each prize's first-listed winner, with everything else untouched.  
-You'll also see red error cells — and by now you can predict exactly which rows they are. The 49 unawarded prizes have no laureates list, so laureates\[0\] fails; organizational laureates have no knownName, so those fail too. The errors aren't a mess to clean up; they're the same information the empty cells carried above, and Python's conditional expressions can absorb them whenever you want a tidier column:  
+You'll also see red error cells — and by now you can predict exactly which rows they are. The 49 unawarded prizes have no laureates list, so laureates\[0\] fails; organizational laureates have no knownName, so those fail too. The errors aren't a mess to clean up; they're the same information the empty cells carried above, and Python's conditional expressions can absorb them whenever you want a tidier column:
+
+![The new laureates[0]["knownName"]["en"] column shows errors for the unawarded First World War prizes and the 1917 Red Cross Peace Prize](screenshots/nested-data-06-expression-errors.svg)
+
 laureates\[0\]\["knownName"\]\["en"\] if laureates else None
 
 (Or leave the errors in place and round them up with select-error, covered in the selection chapter — sometimes the error rows *are* the interesting ones.)  
