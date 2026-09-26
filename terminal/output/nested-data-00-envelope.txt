@@ -1,4 +1,4 @@
-  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
  nobelPrizes        │ meta               │ links
  [682] {8} awardYea…│ {6} offset=0 limit…│ {3} first=http://nobel-external-api-app.azurewebsites.n…
 

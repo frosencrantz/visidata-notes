@@ -1,4 +1,4 @@
-  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
 <prizeAmount#│ prizeAmountAdjuste#│ links              │ laureates_key │ laureates_value    │ topM…
       150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=160 knownNa…│     ⌀
       150782 │           10833458 │ [1] {4} rel=nobelP…│ 0            #│ {7} id=569 knownNa…│     ⌀

@@ -1,4 +1,4 @@
-  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
 <laureates_value.orgName.en                                  │ laureates_value.or…│ laureates_valu>
  Institute of International Law                              │ Folkerettsinstitut…│               ⌀
  Permanent International Peace Bureau                        │ Det internasjonale…│               ⌀

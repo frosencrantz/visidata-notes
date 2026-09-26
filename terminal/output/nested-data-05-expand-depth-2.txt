@@ -1,4 +1,4 @@
-  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
 <laureates_value.id │ laureates_value.kn…│ laureates_value.kn…│ laureates_value.fu…│ laureates_val>
  160                │ Jacobus H. van 't …│                   ⌀│ Jacobus Henricus v…│ 1
  569                │ Sully Prudhomme    │                   ⌀│ Sully Prudhomme    │ 1

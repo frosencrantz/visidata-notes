@@ -1,4 +1,4 @@
-  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
  awardYear │ category           │ categoryFullName   │ dateAwarded │ prizeAmount#│ prizeAmountAdju>
  1901      │ {3} en=Chemistry n…│ {3} en=The Nobel P…│ 1901-11-12  │      150782 │        10833458
  1901      │ {3} en=Literature …│ {3} en=The Nobel P…│ 1901-11-14  │      150782 │        10833458

@@ -1,4 +1,4 @@
-  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.5dev | Support VisiData:
  category.en        ║↓count  ♯│ percent%│ histogram                             ~║
  Physiology or Medi…║     241 │   22.42 │ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ ║
 •Physics            ║     236 │   21.95 │ ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■  ║

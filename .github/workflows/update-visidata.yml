@@ -1,11 +1,12 @@
-# Once a month, check PyPI for a newer VisiData. If there is one, bump the
-# pin in requirements.txt, regenerate every screenshot with it, and open a
-# pull request so the changes can be reviewed before merging.
+# Once a week, check VisiData's develop branch for new commits. If there are
+# any, pin requirements.txt to the latest one, regenerate every screenshot
+# with it, and open a pull request so the changes can be reviewed before
+# merging.
 name: Update VisiData
 
 on:
   schedule:
-    - cron: "17 6 1 * *"  # 1st of each month, 06:17 UTC
+    - cron: "17 6 * * 1"  # Mondays, 06:17 UTC
   workflow_dispatch:
 
 permissions:
@@ -22,22 +23,23 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Compare pinned and latest VisiData
+      - name: Compare pinned and latest develop commit
         id: version
         run: |
-          pinned=$(sed -n 's/^visidata==//p' requirements.txt)
-          latest=$(curl -sSf https://pypi.org/pypi/visidata/json | python3 -c 'import json,sys; print(json.load(sys.stdin)["info"]["version"])')
+          pinned=$(sed -n 's|^visidata @ git+https://github.com/saulpw/visidata@||p' requirements.txt)
+          latest=$(git ls-remote https://github.com/saulpw/visidata refs/heads/develop | cut -f1)
           echo "pinned=$pinned" >> "$GITHUB_OUTPUT"
           echo "latest=$latest" >> "$GITHUB_OUTPUT"
-          echo "VisiData pinned $pinned, latest $latest"
+          echo "short=${latest:0:7}" >> "$GITHUB_OUTPUT"
+          echo "VisiData develop pinned $pinned, latest $latest"
 
       - name: Bump the pin and regenerate screenshots
         id: capture
         if: steps.version.outputs.pinned != steps.version.outputs.latest
         run: |
-          sed -i "s/^visidata==.*/visidata==${{ steps.version.outputs.latest }}/" requirements.txt
+          sed -i "s|^visidata @ git+https://github.com/saulpw/visidata@.*|visidata @ git+https://github.com/saulpw/visidata@${{ steps.version.outputs.latest }}|" requirements.txt
           pip install -r requirements.txt
-          # A new release may change what a script waits for. Keep going so
+          # A new commit may change what a script waits for. Keep going so
           # the PR still opens, and report the failure in its description.
           if make screenshots > capture.log 2>&1 && make check >> capture.log 2>&1; then
             echo "result=passed" >> "$GITHUB_OUTPUT"
@@ -59,12 +61,16 @@ jobs:
         if: steps.version.outputs.pinned != steps.version.outputs.latest
         uses: peter-evans/create-pull-request@v7
         with:
-          branch: update-visidata-${{ steps.version.outputs.latest }}
-          commit-message: Update VisiData to ${{ steps.version.outputs.latest }} and regenerate screenshots
+          # One branch, so a new week's commits update the open PR
+          # instead of opening another one.
+          branch: update-visidata-develop
+          commit-message: Update VisiData develop to ${{ steps.version.outputs.short }} and regenerate screenshots
           title: >-
-            Update VisiData to ${{ steps.version.outputs.latest }}${{ steps.capture.outputs.result == 'failed' && ' (screenshot capture failed)' || '' }}
+            Update VisiData develop to ${{ steps.version.outputs.short }}${{ steps.capture.outputs.result == 'failed' && ' (screenshot capture failed)' || '' }}
           body: |
-            Bumps the pinned VisiData from ${{ steps.version.outputs.pinned }} to ${{ steps.version.outputs.latest }} and regenerates every screenshot.
+            Moves the pinned VisiData to the latest commit on its develop branch and regenerates every screenshot.
+
+            Changes in VisiData: https://github.com/saulpw/visidata/compare/${{ steps.version.outputs.pinned }}...${{ steps.version.outputs.latest }}
 
             **Capture: ${{ steps.capture.outputs.result }}.** Check the `terminal/output/*.txt` diffs to see what changed on screen, and whether the chapters' text still matches.
 
