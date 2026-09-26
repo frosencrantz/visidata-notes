@@ -1,0 +1,5 @@
+  File  Edit  View  Column  Row  Data  Plot  System  Help     | VisiData 3.4 | Support VisiData: htt
+ nobelPrizes        │ meta               │ links
+ [682] {8} awardYea…│ {6} offset=0 limit…│ {3} first=http://nobel-external-api-app.azurewebsites.n…
+
+1›prizes|                                                     Ctrl+L   redraw          1 rows [1/1]

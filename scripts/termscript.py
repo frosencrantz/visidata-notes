@@ -20,9 +20,10 @@ ignored. Arguments are shell-quoted, and backslash escapes (\\n, \\t, \\x13,
         Fails with a dump of the screen if it never matches.
     PAUSE SECS
         Keep reading output for SECS seconds.
-    CAPTURE NAME [--start-line N] [--end-line N]
+    CAPTURE NAME [--start-line N] [--end-line N] [--trim]
         Wait for the screen to settle, then write screenshots/NAME.svg and
         terminal/output/NAME.txt (optionally only a slice of lines).
+        --trim drops the empty rows between a short sheet and the status bar.
 
 Usage: scripts/termscript.py terminal/scripts/nested-data.ts [...]
 """
@@ -161,8 +162,7 @@ def cell_style(ch):
     return fg, bg, ch.bold, ch.underscore, ch.italics
 
 
-def render_svg(screen, start, end):
-    rows = list(range(screen.lines))[start:end]
+def render_svg(screen, rows):
     width = screen.columns * CELL_W + 2 * PAD
     height = len(rows) * CELL_H + 2 * PAD
     bgs, texts = [], []
@@ -214,12 +214,18 @@ def render_svg(screen, start, end):
     ])
 
 
-def capture(session, name, start, end):
+def capture(session, name, start, end, trim):
     session.settle()
+    display = session.lines()
+    rows = list(range(len(display)))[start:end]
+    if trim:
+        # Keep one empty row of breathing room above the last (status) row.
+        while len(rows) > 2 and not display[rows[-2]].strip() and not display[rows[-3]].strip():
+            del rows[-2]
     SVG_DIR.mkdir(parents=True, exist_ok=True)
     TEXT_DIR.mkdir(parents=True, exist_ok=True)
-    (SVG_DIR / f"{name}.svg").write_text(render_svg(session.screen, start, end))
-    text = "\n".join(l.rstrip() for l in session.lines(start, end)).rstrip("\n") + "\n"
+    (SVG_DIR / f"{name}.svg").write_text(render_svg(session.screen, rows))
+    text = "\n".join(display[r].rstrip() for r in rows).rstrip("\n") + "\n"
     (TEXT_DIR / f"{name}.txt").write_text(text)
     print(f"  captured {name}")
 
@@ -233,7 +239,7 @@ COMMANDS = {
     "ENTER": (0, {}),
     "AWAIT": (1, {"--start-line": int, "--end-line": int, "--timeout": float}),
     "PAUSE": (1, {}),
-    "CAPTURE": (1, {"--start-line": int, "--end-line": int}),
+    "CAPTURE": (1, {"--start-line": int, "--end-line": int, "--trim": bool}),
 }
 
 
@@ -287,7 +293,8 @@ def run_script(path):
                 elif cmd == "PAUSE":
                     session.pump(float(args[0]))
                 elif cmd == "CAPTURE":
-                    capture(session, args[0], kw.get("start_line"), kw.get("end_line"))
+                    capture(session, args[0], kw.get("start_line"), kw.get("end_line"),
+                            kw.get("trim", False))
             except (ScriptError, ValueError) as e:
                 raise ScriptError(f"{path}:{lineno}: {line}\n{e}") from None
     finally:

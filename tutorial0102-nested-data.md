@@ -22,14 +22,17 @@ And, like almost every real API response, the records you actually want are wrap
 Open the file the usual way:  
 vd prizes.json
 
-You might expect 682 rows. Instead, you'll see a sheet with one row and three columns: nobelPrizes, meta, and links.  
+You might expect 682 rows. Instead, you'll see a sheet with one row and three columns: nobelPrizes, meta, and links.
+
+![VisiData showing prizes.json as one row with three columns: nobelPrizes, meta, and links](screenshots/nested-data-00-envelope.svg)
+
 That single row *is* the top level of the JSON file. The API wrapped our prizes in an envelope: meta holds paging information, links holds navigation URLs, and nobelPrizes holds the list we care about.  
-Look closely at how VisiData displays the cells. The nobelPrizes cell reads \[682\], and the meta cell reads something like {7}. This notation is worth memorizing, because it tells you which command to reach for later:
+Look closely at how VisiData displays the cells. The nobelPrizes cell reads \[682\], and the meta cell reads something like {6}. This notation is worth memorizing, because it tells you which command to reach for later:
 
 | Cell display | Meaning |
 | :---- | :---- |
 | \[682\] | A list containing 682 items |
-| {7} offset=0 limit=1000 … | A dictionary with 7 keys (with a preview of its contents) |
+| {6} offset=0 limit=1000 … | A dictionary with 6 keys (with a preview of its contents) |
 
 Note: This chapter uses a .json file, but everything in it applies equally to .jsonl / .ndjson files (one JSON record per line, common for logs and data dumps). Those skip the envelope problem entirely — each line becomes a row — but their cells can still contain dictionaries and lists.
 
