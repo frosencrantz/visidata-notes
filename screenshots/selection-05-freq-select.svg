@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="864" height="194" viewBox="0 0 864.0 194" role="img">
 <rect width="100%" height="100%" rx="6" fill="#1e1e1e"/>
-<rect x="12.0" y="12" width="16.8" height="17" fill="#5f87d7"/>
-<rect x="28.8" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="37.2" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="79.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="87.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="129.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="138.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="180.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="188.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
-<rect x="247.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="255.6" y="12" width="33.6" height="17" fill="#5f87d7"/>
-<rect x="289.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="297.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="339.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="348.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="390.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="398.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
-<rect x="457.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="465.6" y="12" width="386.4" height="17" fill="#5f87d7"/>
+<rect x="12.0" y="12" width="16.8" height="17" fill="#5fafff"/>
+<rect x="28.8" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="37.2" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="79.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="87.6" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="129.6" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="138.0" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="180.0" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="188.4" y="12" width="58.8" height="17" fill="#5fafff"/>
+<rect x="247.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="255.6" y="12" width="33.6" height="17" fill="#5fafff"/>
+<rect x="289.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="297.6" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="339.6" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="348.0" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="390.0" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="398.4" y="12" width="58.8" height="17" fill="#5fafff"/>
+<rect x="457.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="465.6" y="12" width="386.4" height="17" fill="#5fafff"/>
 <rect x="12.0" y="29" width="168.0" height="17" fill="#d0d0d0"/>
 <rect x="272.4" y="29" width="75.6" height="17" fill="#5f0000"/>
 <rect x="356.4" y="29" width="336.0" height="17" fill="#5f0000"/>
@@ -29,12 +29,7 @@
 <rect x="180.0" y="97" width="520.8" height="17" fill="#d0d0d0"/>
 <rect x="12.0" y="114" width="168.0" height="17" fill="#282828"/>
 <rect x="12.0" y="131" width="168.0" height="17" fill="#282828"/>
-<rect x="12.0" y="165" width="67.2" height="17" fill="#5f87d7"/>
-<rect x="79.2" y="165" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="104.4" y="165" width="168.0" height="17" fill="#5f87d7"/>
-<rect x="272.4" y="165" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="297.6" y="165" width="168.0" height="17" fill="#5f87d7"/>
-<rect x="465.6" y="165" width="25.2" height="17" fill="#5f87d7"/>
+<rect x="12.0" y="165" width="16.8" height="17" fill="#5f87d7"/>
 <rect x="499.2" y="165" width="8.4" height="17" fill="#5f87d7"/>
 <rect x="507.6" y="165" width="8.4" height="17" fill="#3a3a3a"/>
 <rect x="516.0" y="165" width="25.2" height="17" fill="#5f87d7"/>
@@ -85,13 +80,8 @@
 <text x="180.0" y="127" textLength="672.0">║     129 │   12.00 │ ■■■■■■■■■■■■■■■■■■■■                   ║                  </text>
 <text x="12.0" y="144" textLength="168.0" fill="#5fd7ff" font-weight="bold"> Economic Sciences  </text>
 <text x="180.0" y="144" textLength="672.0">║      99 │    9.21 │ ■■■■■■■■■■■■■■■                        ║                  </text>
-<text x="12.0" y="178" textLength="67.2" fill="#1e1e1e" font-weight="bold">1›prizes</text>
-<text x="79.2" y="178" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="104.4" y="178" textLength="168.0" fill="#1e1e1e" font-weight="bold">2›prizes[…obelPrizes</text>
-<text x="272.4" y="178" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="297.6" y="178" textLength="168.0" fill="#1e1e1e" font-weight="bold">3›prizes[…s_unfurled</text>
-<text x="465.6" y="178" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="490.8" y="178" textLength="8.4" fill="#ffd7af">6</text>
+<text x="12.0" y="178" textLength="16.8" fill="#1e1e1e">… </text>
+<text x="28.8" y="178" textLength="470.4" fill="#ffd7af">6📶prizes[0].nobelPrizes_laureates_unfurled_category.en_</text>
 <text x="507.6" y="178" textLength="8.4" font-weight="bold">s</text>
 <text x="541.2" y="178" textLength="84.0">select-row</text>
 <text x="625.2" y="178" textLength="151.2" fill="#1e1e1e">          6 bins  </text>

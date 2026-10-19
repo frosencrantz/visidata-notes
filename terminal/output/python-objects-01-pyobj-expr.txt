@@ -3,4 +3,4 @@
  mean ║ 2       #║
  tags ║ [2] a; b ║
 
-1›prizes | 2›{"mean": statistics.mean([1, 2, 3]), "tags" Ctrl+X   pyobj-expr          2 items [1/1]
+… 2›{"mean": statistics.mean([1, 2, 3]), "tags": ["a", " Ctrl+X   pyobj-expr          2 items [1/1]

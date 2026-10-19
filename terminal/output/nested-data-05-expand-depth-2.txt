@@ -13,4 +13,4 @@
  2                  │ Hendrik A. Lorentz │                   ⌀│ Hendrik Antoon Lor…│ 1/2
  3                  │ Pieter Zeeman      │                   ⌀│ Pieter Zeeman      │ 1/2
  294                │ Ronald Ross        │                   ⌀│ Ronald Ross        │ 1
-1›prizes | 2›prizes[…obelPrizes | 3›prizes[0].nobelPrize c   go-col-regex       1075 rows  [M][1/1]
+… 3›prizes[0].nobelPrizes_laureates_unfurled|            c   go-col-regex       1075 rows  [M][1/1]

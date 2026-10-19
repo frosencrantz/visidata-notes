@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="864" height="296" viewBox="0 0 864.0 296" role="img">
 <rect width="100%" height="100%" rx="6" fill="#1e1e1e"/>
-<rect x="12.0" y="12" width="16.8" height="17" fill="#5f87d7"/>
-<rect x="28.8" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="37.2" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="79.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="87.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="129.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="138.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="180.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="188.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
-<rect x="247.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="255.6" y="12" width="33.6" height="17" fill="#5f87d7"/>
-<rect x="289.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="297.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="339.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="348.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="390.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="398.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
-<rect x="457.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="465.6" y="12" width="386.4" height="17" fill="#5f87d7"/>
+<rect x="12.0" y="12" width="16.8" height="17" fill="#5fafff"/>
+<rect x="28.8" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="37.2" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="79.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="87.6" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="129.6" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="138.0" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="180.0" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="188.4" y="12" width="58.8" height="17" fill="#5fafff"/>
+<rect x="247.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="255.6" y="12" width="33.6" height="17" fill="#5fafff"/>
+<rect x="289.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="297.6" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="339.6" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="348.0" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="390.0" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="398.4" y="12" width="58.8" height="17" fill="#5fafff"/>
+<rect x="457.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="465.6" y="12" width="386.4" height="17" fill="#5fafff"/>
 <rect x="12.0" y="29" width="92.4" height="17" fill="#d0d0d0"/>
 <rect x="112.8" y="29" width="168.0" height="17" fill="#5f0000"/>
 <rect x="289.2" y="29" width="168.0" height="17" fill="#5f0000"/>
@@ -37,11 +37,8 @@
 <rect x="20.4" y="233" width="84.0" height="17" fill="#282828"/>
 <rect x="12.0" y="250" width="92.4" height="17" fill="#d0d0d0"/>
 <rect x="104.4" y="250" width="739.2" height="17" fill="#d0d0d0"/>
-<rect x="12.0" y="267" width="67.2" height="17" fill="#5f87d7"/>
-<rect x="79.2" y="267" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="104.4" y="267" width="168.0" height="17" fill="#5f87d7"/>
-<rect x="272.4" y="267" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="423.6" y="267" width="8.4" height="17" fill="#5f87d7"/>
+<rect x="12.0" y="267" width="16.8" height="17" fill="#5f87d7"/>
+<rect x="381.6" y="267" width="50.4" height="17" fill="#5f87d7"/>
 <rect x="432.0" y="267" width="16.8" height="17" fill="#3a3a3a"/>
 <rect x="448.8" y="267" width="25.2" height="17" fill="#5f87d7"/>
 <rect x="474.0" y="267" width="109.2" height="17" fill="#5f87d7"/>
@@ -115,11 +112,9 @@
 <text x="104.4" y="246" textLength="739.2" fill="#ffaf5f">│ Chemistry          │ Kjemi              │ Kemi               │ {3} en=The Nobel P…│ 1…</text>
 <text x="12.0" y="263" textLength="92.4" fill="#282828" font-weight="bold"> 1916      </text>
 <text x="104.4" y="263" textLength="739.2" fill="#1e1e1e">│ Literature         │ Litteratur         │ Litteratur         │ {3} en=The Nobel P…│ 1…</text>
-<text x="12.0" y="280" textLength="67.2" fill="#1e1e1e" font-weight="bold">1›prizes</text>
-<text x="79.2" y="280" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="104.4" y="280" textLength="168.0" fill="#1e1e1e" font-weight="bold">2›prizes[…obelPrizes</text>
-<text x="272.4" y="280" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="297.6" y="280" textLength="126.0" fill="#ffd7af">3›prizes[0].nob</text>
+<text x="12.0" y="280" textLength="16.8" fill="#1e1e1e">… </text>
+<text x="28.8" y="280" textLength="352.8" fill="#ffd7af">3›prizes[0].nobelPrizes_laureates_unfurled</text>
+<text x="381.6" y="280" textLength="50.4" fill="#1e1e1e">|     </text>
 <text x="432.0" y="280" textLength="16.8" font-weight="bold">zr</text>
 <text x="474.0" y="280" textLength="109.2">go-row-number</text>
 <text x="583.2" y="280" textLength="184.8" fill="#1e1e1e">       1075 rows  [M] </text>

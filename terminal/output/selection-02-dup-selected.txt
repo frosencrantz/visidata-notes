@@ -13,4 +13,4 @@
  1918      │ Literature         │ Litteratur         │ Litteratur         │ {3} en=The Nobel P…│  ⌀
  1918      │ Peace              │ Fred               │ Fred               │ {3} en=The Nobel P…│  ⌀
  1918      │ Physiology or Medi…│ Fysiologi eller me…│ Fysiologi eller me…│ {3} en=The Nobel P…│  ⌀
-1›prizes | 2›prizes[…obelPrizes | 3›prizes[…s_unfurled | 4›p "   dup-selected         49 rows [1/1]
+… 4›prizes[0].nobelPrizes_laureates_unfurled_selectedref|    "   dup-selected         49 rows [1/1]

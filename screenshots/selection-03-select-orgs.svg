@@ -1,24 +1,24 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="864" height="296" viewBox="0 0 864.0 296" role="img">
 <rect width="100%" height="100%" rx="6" fill="#1e1e1e"/>
-<rect x="12.0" y="12" width="16.8" height="17" fill="#5f87d7"/>
-<rect x="28.8" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="37.2" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="79.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="87.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="129.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="138.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="180.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="188.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
-<rect x="247.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="255.6" y="12" width="33.6" height="17" fill="#5f87d7"/>
-<rect x="289.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="297.6" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="339.6" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="348.0" y="12" width="42.0" height="17" fill="#5f87d7"/>
-<rect x="390.0" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="398.4" y="12" width="58.8" height="17" fill="#5f87d7"/>
-<rect x="457.2" y="12" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="465.6" y="12" width="386.4" height="17" fill="#5f87d7"/>
+<rect x="12.0" y="12" width="16.8" height="17" fill="#5fafff"/>
+<rect x="28.8" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="37.2" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="79.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="87.6" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="129.6" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="138.0" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="180.0" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="188.4" y="12" width="58.8" height="17" fill="#5fafff"/>
+<rect x="247.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="255.6" y="12" width="33.6" height="17" fill="#5fafff"/>
+<rect x="289.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="297.6" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="339.6" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="348.0" y="12" width="42.0" height="17" fill="#5fafff"/>
+<rect x="390.0" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="398.4" y="12" width="58.8" height="17" fill="#5fafff"/>
+<rect x="457.2" y="12" width="8.4" height="17" fill="#5fafff"/>
+<rect x="465.6" y="12" width="386.4" height="17" fill="#5fafff"/>
 <rect x="20.4" y="29" width="504.0" height="17" fill="#d0d0d0"/>
 <rect x="532.8" y="29" width="168.0" height="17" fill="#5f0000"/>
 <rect x="709.2" y="29" width="126.0" height="17" fill="#5f0000"/>
@@ -37,16 +37,12 @@
 <rect x="12.0" y="216" width="512.4" height="17" fill="#282828"/>
 <rect x="12.0" y="233" width="512.4" height="17" fill="#282828"/>
 <rect x="12.0" y="250" width="512.4" height="17" fill="#282828"/>
-<rect x="12.0" y="267" width="67.2" height="17" fill="#5f87d7"/>
-<rect x="79.2" y="267" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="104.4" y="267" width="168.0" height="17" fill="#5f87d7"/>
-<rect x="272.4" y="267" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="297.6" y="267" width="168.0" height="17" fill="#5f87d7"/>
-<rect x="465.6" y="267" width="8.4" height="17" fill="#5f87d7"/>
-<rect x="474.0" y="267" width="8.4" height="17" fill="#3a3a3a"/>
+<rect x="12.0" y="267" width="16.8" height="17" fill="#5f87d7"/>
 <rect x="482.4" y="267" width="25.2" height="17" fill="#5f87d7"/>
-<rect x="507.6" y="267" width="117.6" height="17" fill="#5f87d7"/>
-<rect x="625.2" y="267" width="176.4" height="17" fill="#5f87d7"/>
+<rect x="507.6" y="267" width="8.4" height="17" fill="#3a3a3a"/>
+<rect x="516.0" y="267" width="25.2" height="17" fill="#5f87d7"/>
+<rect x="541.2" y="267" width="117.6" height="17" fill="#5f87d7"/>
+<rect x="658.8" y="267" width="142.8" height="17" fill="#5f87d7"/>
 <rect x="801.6" y="267" width="42.0" height="17" fill="#87d787"/>
 <rect x="843.6" y="267" width="8.4" height="17" fill="#5f87d7"/>
 <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#d0d0d0" lengthAdjust="spacingAndGlyphs" xml:space="preserve">
@@ -112,14 +108,12 @@
 <text x="692.4" y="263" textLength="8.4" fill="#ffff00">⌀</text>
 <text x="700.8" y="263" textLength="134.4">│               </text>
 <text x="835.2" y="263" textLength="8.4" fill="#ffff00">⌀</text>
-<text x="12.0" y="280" textLength="67.2" fill="#1e1e1e" font-weight="bold">1›prizes</text>
-<text x="79.2" y="280" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="104.4" y="280" textLength="168.0" fill="#1e1e1e" font-weight="bold">2›prizes[…obelPrizes</text>
-<text x="272.4" y="280" textLength="25.2" fill="#1e1e1e"> | </text>
-<text x="297.6" y="280" textLength="168.0" fill="#1e1e1e" font-weight="bold">3›prizes[…s_unfurled</text>
-<text x="474.0" y="280" textLength="8.4" font-weight="bold">_</text>
-<text x="507.6" y="280" textLength="117.6">resize-col-max</text>
-<text x="625.2" y="280" textLength="176.4" fill="#1e1e1e">         31 rows  [M]</text>
+<text x="12.0" y="280" textLength="16.8" fill="#1e1e1e">… </text>
+<text x="28.8" y="280" textLength="453.6" fill="#ffd7af">5›prizes[0].nobelPrizes_laureates_unfurled_selectedref</text>
+<text x="482.4" y="280" textLength="25.2" fill="#1e1e1e">|  </text>
+<text x="507.6" y="280" textLength="8.4" font-weight="bold">_</text>
+<text x="541.2" y="280" textLength="117.6">resize-col-max</text>
+<text x="658.8" y="280" textLength="142.8" fill="#1e1e1e">         31 rows </text>
 <text x="801.6" y="280" textLength="42.0" fill="#1e1e1e" font-weight="bold">[1/1]</text>
 </g>
 </svg>

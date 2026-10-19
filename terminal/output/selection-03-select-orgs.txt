@@ -13,4 +13,4 @@
  United Nations Children's Fund                              │ FNs barnefond      │ UNICEF
  International Labour Organization                           │ Den internasjonale…│ ILO
  Amnesty International                                       │                   ⌀│               ⌀
-1›prizes | 2›prizes[…obelPrizes | 3›prizes[…s_unfurled _   resize-col-max         31 rows  [M][1/1]
+… 5›prizes[0].nobelPrizes_laureates_unfurled_selectedref|  _   resize-col-max         31 rows [1/1]
